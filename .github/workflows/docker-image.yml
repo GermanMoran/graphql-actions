@@ -27,5 +27,5 @@ jobs:
         docker build --tag germanmoran/docker-grapql:0.0.2 .
     - name: push image
       run: |
-        docker push germanmoran/docker-grapql:0.0.2 .
+        docker push germanmoran/docker-grapql:0.0.2
 
