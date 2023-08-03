@@ -22,6 +22,10 @@ jobs:
         echo "Iniciando login dockerhub"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         echo "Fin del login"
-        
-    #- name: Build the Docker i
-     # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: build docker
+      run: |
+        docker build --tag germanmoran/docker-grapql:0.0.2 .
+    - name: push image
+      run: |
+        docker push germanmoran/docker-grapql:0.0.2 .
+
