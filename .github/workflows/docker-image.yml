@@ -33,7 +33,7 @@ jobs:
       env:
          NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build --tag germanmoran/docker-grapql:NEW_VERSION .
+        docker build --tag germanmoran/docker-grapql:$NEW_VERSION .
         docker build --tag germanmoran/docker-grapql:latest .
     - name: push image
       env:
