@@ -25,7 +25,7 @@ jobs:
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        NER_VERSION: ${{ steps.version.outputs.version }}
+        NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         echo "Iniciando login dockerhub"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
