@@ -31,7 +31,7 @@ jobs:
       run: |
         echo "Iniciando login dockerhub"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-        echo "NEW VERSION: "$NEW_VERSION
+        echo "NEW VERSION:$NEW_VERSION"
         echo "Fin del login"
    # - name: build docker
    #   run: |
