@@ -21,13 +21,11 @@ jobs:
         minor_pattern: "feat: "
         format: "${major}.${minor}.${patch}-prerelease${increment}"
       id: version
-      
-
     - name: login
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        NER_VERSION: ${{steps.versions.outputs.version}}
+        NER_VERSION: ${{ steps.version.outputs.version }}
       run: |
         echo "Iniciando login dockerhub"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
