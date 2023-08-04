@@ -40,5 +40,5 @@ jobs:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker push germanmoran/docker-grapql:$NEW_VERSION
-        docker build --tag germanmoran/docker-grapql:latest 
+        docker push germanmoran/docker-grapql:latest 
 
